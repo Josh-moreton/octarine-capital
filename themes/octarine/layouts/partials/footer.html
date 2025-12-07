@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">Octarine Capital</span>
+        <p class="footer-tagline">{{ .Site.Params.tagline }}</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          {{ range .Site.Menus.footer }}
+          <li>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">&copy; {{ now.Format "2006" }} Octarine Capital. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

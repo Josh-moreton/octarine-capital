@@ -1,0 +1,38 @@
+{{ define "main" }}
+<article class="insight-post">
+  <div class="container container--narrow">
+    <header class="insight-header">
+      <a href="/insights/" class="insight-back">&larr; Back to Insights</a>
+
+      <time class="insight-date" datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "2 January 2006" }}
+      </time>
+
+      <h1 class="insight-title">{{ .Title }}</h1>
+
+      {{ with .Params.summary }}
+      <p class="insight-summary">{{ . }}</p>
+      {{ end }}
+
+      <div class="accent-line"></div>
+
+      {{ $words := .WordCount }}
+      {{ $readingTime := div $words 200 }}
+      {{ if lt $readingTime 1 }}{{ $readingTime = 1 }}{{ end }}
+      <p class="insight-meta">{{ $readingTime }} min read</p>
+    </header>
+
+    <div class="insight-content prose">
+      {{ .Content }}
+    </div>
+
+    <footer class="insight-footer">
+      <div class="accent-line"></div>
+      <p class="insight-disclaimer">
+        <em>This insight is for informational purposes only and does not constitute investment advice. Please see our <a href="/disclaimer/">disclaimer</a> for more information.</em>
+      </p>
+      <a href="/insights/" class="btn btn--secondary">&larr; Back to all insights</a>
+    </footer>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,40 @@
+{{ define "main" }}
+<section class="insights-page">
+  <div class="container container--narrow">
+    <header class="page-header">
+      <h1 class="page-title">Insights</h1>
+      <div class="accent-line"></div>
+      <p class="page-subtitle">Weekly perspectives on markets, positioning, and the patterns we're watching.</p>
+    </header>
+
+    {{ if .Pages }}
+    <div class="insights-list">
+      {{ range .Pages.ByDate.Reverse }}
+      <article class="insight-list-item">
+        <time class="insight-date" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "2 January 2006" }}
+        </time>
+        <h2 class="insight-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+        {{ with .Params.summary }}
+        <p class="insight-summary">{{ . }}</p>
+        {{ else }}
+        {{ with .Summary }}
+        <p class="insight-summary">{{ . }}</p>
+        {{ end }}
+        {{ end }}
+        <a href="{{ .Permalink }}" class="insight-read-more">Read more &rarr;</a>
+      </article>
+      {{ end }}
+    </div>
+    {{ else }}
+    <p class="insights-empty">Insights coming soon. Check back for our weekly market perspectives.</p>
+    {{ end }}
+
+    <div class="insights-rss">
+      <p>Subscribe to our insights via <a href="/insights/index.xml">RSS feed</a>.</p>
+    </div>
+  </div>
+</section>
+{{ end }}

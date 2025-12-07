@@ -1,0 +1,36 @@
+<section class="section section--insights" id="insights">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Insights</h2>
+      <div class="accent-line"></div>
+      <p class="section-subtitle">Weekly perspectives on markets, positioning, and the patterns we're watching.</p>
+    </div>
+
+    {{ $insights := where .Site.RegularPages "Section" "insights" }}
+    {{ $recentInsights := first 3 $insights }}
+
+    {{ if $recentInsights }}
+    <div class="insights-grid">
+      {{ range $recentInsights }}
+      <article class="insight-card">
+        <time class="insight-date" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "2 January 2006" }}
+        </time>
+        <h3 class="insight-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        {{ with .Summary }}
+        <p class="insight-excerpt">{{ . }}</p>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+
+    <div class="insights-cta">
+      <a href="/insights/" class="btn btn--secondary">View all insights &rarr;</a>
+    </div>
+    {{ else }}
+    <p class="insights-empty">Insights coming soon.</p>
+    {{ end }}
+  </div>
+</section>

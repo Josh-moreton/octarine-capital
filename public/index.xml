@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Octarine Capital</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Octarine Capital</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Weekly Market Focus: Navigating Year-End Volatility</title>
+      <link>http://localhost:1313/insights/weekly-market-focus-2024-12-09/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/insights/weekly-market-focus-2024-12-09/</guid>
+      <description>As we approach year-end, our models are detecting interesting signals across equity and fixed income markets. Here&amp;rsquo;s how we&amp;rsquo;re positioned.</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;h2 id=&#34;get-in-touch&#34;&gt;Get in Touch&lt;/h2&gt;&#xA;&lt;p&gt;For enquiries, please contact us at:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:info@octarinecapital.com&#34;&gt;info@octarinecapital.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;We aim to respond to all enquiries within two business days.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;em&gt;Please note that Octarine Capital is not currently accepting new investors.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disclaimer</title>
+      <link>http://localhost:1313/disclaimer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/disclaimer/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Last updated: December 2024&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;important-notice&#34;&gt;Important Notice&lt;/h2&gt;&#xA;&lt;p&gt;The information contained on this website is provided by Octarine Capital for general informational purposes only. All information on this Site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.&lt;/p&gt;&#xA;&lt;h2 id=&#34;not-investment-advice&#34;&gt;Not Investment Advice&lt;/h2&gt;&#xA;&lt;p&gt;Nothing on this website constitutes professional and/or financial advice, nor does any information on the Site constitute a comprehensive or complete statement of the matters discussed or the law relating thereto.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Privacy Policy</title>
+      <link>http://localhost:1313/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/privacy/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Last updated: December 2024&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Octarine Capital (&amp;ldquo;we&amp;rdquo;, &amp;ldquo;our&amp;rdquo;, or &amp;ldquo;us&amp;rdquo;) respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website.&lt;/p&gt;&#xA;&lt;h2 id=&#34;information-we-collect&#34;&gt;Information We Collect&lt;/h2&gt;&#xA;&lt;h3 id=&#34;information-you-provide&#34;&gt;Information You Provide&lt;/h3&gt;&#xA;&lt;p&gt;When you contact us via email or through our website, we may collect:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Your name&lt;/li&gt;&#xA;&lt;li&gt;Email address&lt;/li&gt;&#xA;&lt;li&gt;Any other information you choose to provide&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;automatically-collected-information&#34;&gt;Automatically Collected Information&lt;/h3&gt;&#xA;&lt;p&gt;When you visit our website, we may automatically collect:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terms of Use</title>
+      <link>http://localhost:1313/terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/terms/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Last updated: December 2024&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;acceptance-of-terms&#34;&gt;Acceptance of Terms&lt;/h2&gt;&#xA;&lt;p&gt;By accessing and using the Octarine Capital website (&amp;ldquo;Site&amp;rdquo;), you accept and agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use this Site.&lt;/p&gt;&#xA;&lt;h2 id=&#34;use-of-the-site&#34;&gt;Use of the Site&lt;/h2&gt;&#xA;&lt;h3 id=&#34;permitted-use&#34;&gt;Permitted Use&lt;/h3&gt;&#xA;&lt;p&gt;This Site is provided for informational purposes only. You may view, download, and print content from this Site for your personal, non-commercial use only.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
