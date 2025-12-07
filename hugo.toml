@@ -1,13 +1,12 @@
-baseURL = 'https://octarinecapital.com/'
+baseURL = 'https://octarine.capital/'
 languageCode = 'en-gb'
 title = 'Octarine Capital'
 theme = 'octarine'
 
 [params]
-  tagline = "Where Mathematics Meets Markets"
   subline = "Systematic. Quantitative. Unconventional."
   description = "Octarine Capital is a systematic investment firm deploying quantitative strategies across global markets."
-  email = "info@octarinecapital.com"
+  email = "info@octarine.capital"
 
 [markup]
   [markup.goldmark]

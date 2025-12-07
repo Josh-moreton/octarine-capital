@@ -7,7 +7,7 @@ description: "Get in touch with Octarine Capital"
 
 For enquiries, please contact us at:
 
-**Email:** [info@octarinecapital.com](mailto:info@octarinecapital.com)
+**Email:** [info@octarine.capital](mailto:info@octarine.capital)
 
 We aim to respond to all enquiries within two business days.
 

@@ -15,7 +15,7 @@
 
   // Configuration
   const config = {
-    particleCount: 50,
+    particleCount: 75,
     particleColor: 'rgba(124, 245, 212, 0.6)', // Octarine teal
     lineColor: 'rgba(124, 245, 212, 0.15)',
     particleRadius: 2,
