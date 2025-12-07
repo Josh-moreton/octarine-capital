@@ -422,6 +422,77 @@ p {
 }
 
 /* ============================================
+   Performance Section
+   ============================================ */
+
+.section--performance {
+  background: var(--color-dark);
+  color: var(--color-background);
+}
+
+.section--performance .section-title {
+  color: var(--color-background);
+}
+
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.performance-stat {
+  text-align: center;
+}
+
+.stat-value {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+  min-height: 1.2em;
+}
+
+.stat-number {
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-suffix {
+  font-size: 0.6em;
+  margin-left: 0.1em;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.performance-disclaimer {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: var(--space-3xl);
+  margin-bottom: 0;
+}
+
+.performance-disclaimer a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.performance-disclaimer a:hover {
+  color: var(--color-accent);
+}
+
+/* ============================================
    Approach Section
    ============================================ */
 

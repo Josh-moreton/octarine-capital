@@ -1,0 +1,37 @@
+<section class="section section--performance" id="performance">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Performance</h2>
+      <div class="accent-line"></div>
+    </div>
+
+    {{ with .Site.Data.performance }}
+    <div class="performance-grid">
+      <div class="performance-stat">
+        <div class="stat-value" data-target="{{ .aum }}" data-format="currency">
+          <span class="stat-number">$0</span>
+        </div>
+        <div class="stat-label">Assets Under Management</div>
+      </div>
+
+      <div class="performance-stat">
+        <div class="stat-value" data-target="{{ .month_return }}" data-format="percent">
+          <span class="stat-number">0.00</span><span class="stat-suffix">%</span>
+        </div>
+        <div class="stat-label">Past Month</div>
+      </div>
+
+      <div class="performance-stat">
+        <div class="stat-value" data-target="{{ .year_return }}" data-format="percent">
+          <span class="stat-number">0.00</span><span class="stat-suffix">%</span>
+        </div>
+        <div class="stat-label">Past 12 Months</div>
+      </div>
+    </div>
+
+    <p class="performance-disclaimer">
+      As of {{ .as_of }}. Past performance is not indicative of future results. See <a href="/disclaimer/">disclaimer</a>.
+    </p>
+    {{ end }}
+  </div>
+</section>

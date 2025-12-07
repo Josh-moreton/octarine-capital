@@ -190,4 +190,110 @@
   document.querySelectorAll('.section').forEach(section => {
     observer.observe(section);
   });
+
+  // ============================================
+  // Performance Stats Counter Animation
+  // Scramble effect before landing on final value
+  // ============================================
+
+  class StatCounter {
+    constructor(element) {
+      this.element = element;
+      this.numberEl = element.querySelector('.stat-number');
+      this.target = parseFloat(element.dataset.target);
+      this.format = element.dataset.format;
+      this.hasAnimated = false;
+      this.scrambleDuration = 1500; // Total animation time
+      this.scrambleSpeed = 50; // Speed of number changes
+    }
+
+    formatNumber(value) {
+      if (this.format === 'currency') {
+        // Format as currency (e.g., $127.5M)
+        if (value >= 1000000000) {
+          return '$' + (value / 1000000000).toFixed(1) + 'B';
+        } else if (value >= 1000000) {
+          return '$' + (value / 1000000).toFixed(1) + 'M';
+        } else if (value >= 1000) {
+          return '$' + (value / 1000).toFixed(0) + 'K';
+        }
+        return '$' + value.toFixed(0);
+      } else if (this.format === 'percent') {
+        return value.toFixed(2);
+      }
+      return value.toString();
+    }
+
+    generateScramble() {
+      // Generate a random number in a similar range
+      if (this.format === 'currency') {
+        const magnitude = Math.pow(10, Math.floor(Math.log10(this.target)));
+        return Math.random() * magnitude * 10;
+      } else if (this.format === 'percent') {
+        return Math.random() * 40 - 10;
+      }
+      return Math.random() * this.target * 2;
+    }
+
+    animate() {
+      if (this.hasAnimated) return;
+      this.hasAnimated = true;
+
+      const startTime = performance.now();
+      const scrambleEndTime = this.scrambleDuration * 0.7; // Scramble for 70% of duration
+
+      const tick = (currentTime) => {
+        const elapsed = currentTime - startTime;
+
+        if (elapsed < scrambleEndTime) {
+          // Scramble phase - show random numbers
+          const scrambledValue = this.generateScramble();
+          this.numberEl.textContent = this.formatNumber(scrambledValue);
+          setTimeout(() => requestAnimationFrame(tick), this.scrambleSpeed);
+        } else if (elapsed < this.scrambleDuration) {
+          // Settle phase - ease towards final value
+          const settleProgress = (elapsed - scrambleEndTime) / (this.scrambleDuration - scrambleEndTime);
+          const eased = 1 - Math.pow(1 - settleProgress, 3); // Ease out cubic
+
+          // Mix between random and target
+          if (Math.random() > eased) {
+            this.numberEl.textContent = this.formatNumber(this.generateScramble());
+          } else {
+            this.numberEl.textContent = this.formatNumber(this.target);
+          }
+          setTimeout(() => requestAnimationFrame(tick), this.scrambleSpeed);
+        } else {
+          // Final value
+          this.numberEl.textContent = this.formatNumber(this.target);
+          this.element.classList.add('is-counted');
+        }
+      };
+
+      requestAnimationFrame(tick);
+    }
+  }
+
+  // Initialize stat counters
+  const statCounters = [];
+  document.querySelectorAll('.stat-value').forEach(el => {
+    statCounters.push(new StatCounter(el));
+  });
+
+  // Observe performance section for counter animation
+  const performanceSection = document.querySelector('.section--performance');
+  if (performanceSection) {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Stagger the animations slightly
+          statCounters.forEach((counter, index) => {
+            setTimeout(() => counter.animate(), index * 150);
+          });
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    counterObserver.observe(performanceSection);
+  }
 })();
