@@ -52,4 +52,4 @@ We reserve the right to modify these Terms of Use at any time. Changes will be e
 
 ## Contact
 
-For questions about these Terms of Use, please contact us at [info@octarinecapital.com](mailto:info@octarinecapital.com).
+For questions about these Terms of Use, please contact us at [info@octarine.capital](mailto:info@octarine.capital).

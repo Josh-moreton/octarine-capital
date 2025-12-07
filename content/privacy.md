@@ -62,4 +62,4 @@ We may update this privacy policy from time to time. The updated version will be
 
 ## Contact Us
 
-If you have questions about this privacy policy, please contact us at [info@octarinecapital.com](mailto:info@octarinecapital.com).
+If you have questions about this privacy policy, please contact us at [info@octarine.capital](mailto:info@octarine.capital).

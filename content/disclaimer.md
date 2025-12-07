@@ -54,4 +54,4 @@ Under no circumstances shall Octarine Capital be held liable for any loss or dam
 
 ## Contact
 
-If you have any questions regarding this disclaimer, please contact us at [info@octarinecapital.com](mailto:info@octarinecapital.com).
+If you have any questions regarding this disclaimer, please contact us at [info@octarine.capital](mailto:info@octarine.capital).
