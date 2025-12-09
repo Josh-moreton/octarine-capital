@@ -1026,3 +1026,166 @@ p {
     transform: none;
   }
 }
+
+/* ============================================
+   Horizontal Panels (GSAP ScrollTrigger)
+   ============================================ */
+
+body {
+  overflow-x: hidden;
+}
+
+#panels {
+  overflow: hidden;
+}
+
+#panels-container {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.panel-content {
+  width: 100%;
+  max-width: var(--container-max);
+  padding: var(--space-2xl) var(--space-md);
+  text-align: center;
+}
+
+/* Panel Variants */
+.panel--philosophy {
+  background: var(--color-background);
+}
+
+.panel--performance {
+  background: var(--color-dark);
+  color: var(--color-background);
+}
+
+.panel--performance .section-title {
+  color: var(--color-background);
+}
+
+.panel--approach {
+  background: var(--color-background-alt);
+}
+
+.panel--about {
+  background: var(--color-background);
+}
+
+/* Panel Navigation (Prev/Next links) */
+.panel-nav {
+  position: absolute;
+  bottom: var(--space-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.panel-nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+}
+
+.panel-nav-link:hover {
+  color: var(--color-accent-dark);
+  border-color: var(--color-accent);
+  background: rgba(124, 245, 212, 0.1);
+}
+
+.panel--performance .panel-nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.panel--performance .panel-nav-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: rgba(124, 245, 212, 0.1);
+}
+
+/* Active Nav State */
+.nav-menu a.is-active::after {
+  width: 100%;
+}
+
+.nav-menu a.is-active {
+  color: var(--color-primary);
+}
+
+/* Panel content adjustments */
+.panel .philosophy-content,
+.panel .about-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.panel .performance-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.panel .approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Mobile: Stack panels vertically */
+@media (max-width: 768px) {
+  #panels-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .panel {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .panel-content {
+    padding: var(--space-3xl) var(--space-md);
+  }
+
+  .panel-nav {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: var(--space-xl);
+    justify-content: center;
+  }
+
+  .panel .approach-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Hero adjustment for scroll indicator
+   ============================================ */
+
+.hero-scroll {
+  cursor: pointer;
+}

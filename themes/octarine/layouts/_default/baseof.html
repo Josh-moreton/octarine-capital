@@ -12,9 +12,19 @@
 
   {{- partial "footer.html" . -}}
 
+  <!-- GSAP Core + Plugins (100% free as of 2024) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
   {{ $particles := resources.Get "js/particles.js" }}
   {{ if $particles }}
   <script src="{{ $particles.RelPermalink }}"></script>
+  {{ end }}
+
+  {{ $scrollPanels := resources.Get "js/scroll-panels.js" }}
+  {{ if $scrollPanels }}
+  <script src="{{ $scrollPanels.RelPermalink }}"></script>
   {{ end }}
 </body>
 </html>

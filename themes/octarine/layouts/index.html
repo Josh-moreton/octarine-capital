@@ -1,8 +1,16 @@
 {{ define "main" }}
   {{- partial "hero.html" . -}}
-  {{- partial "philosophy.html" . -}}
-  {{- partial "performance.html" . -}}
-  {{- partial "approach.html" . -}}
-  {{- partial "about.html" . -}}
+
+  {{/* Horizontal scrolling panels section */}}
+  <section id="panels">
+    <div id="panels-container">
+      {{- partial "philosophy.html" . -}}
+      {{- partial "performance.html" . -}}
+      {{- partial "approach.html" . -}}
+      {{- partial "about.html" . -}}
+    </div>
+  </section>
+
+  {{/* Return to vertical scroll for insights */}}
   {{- partial "insights-preview.html" . -}}
 {{ end }}

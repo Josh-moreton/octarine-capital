@@ -147,19 +147,19 @@
   init();
   animate();
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
+  // Smooth scroll for anchor links - DISABLED: Now handled by GSAP ScrollTrigger
+  // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  //   anchor.addEventListener('click', function(e) {
+  //     e.preventDefault();
+  //     const target = document.querySelector(this.getAttribute('href'));
+  //     if (target) {
+  //       target.scrollIntoView({
+  //         behavior: 'smooth',
+  //         block: 'start'
+  //       });
+  //     }
+  //   });
+  // });
 
   // Mobile nav toggle
   const navToggle = document.querySelector('.nav-toggle');
